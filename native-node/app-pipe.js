@@ -18,4 +18,4 @@ var gzip = zlib.createGzip();
 
 readable.pipe(writable);
 
-readable.pipe(gzip).pipe(compressed);
+readable.pipe(gzip).pipe(compressed);   
