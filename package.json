@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/nikhilkhandelwal18/nodejs#readme",
   "dependencies": {
+    "express": "^4.15.4",
     "moment": "^2.18.1"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
   }
 }

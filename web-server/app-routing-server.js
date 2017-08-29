@@ -9,10 +9,10 @@ http.createServer(function (req, res) {
         var html = fs.createReadStream(__dirname + '/index.html').pipe(res);
     }
 
-    else if (req.url === '/api') {
+    else if (req.url === '/api/json') {
         res.writeHead(200, { 'content-type': 'application/json' });
         var obj = {
-            firstname: 'John',
+            firstname: 'John123',
             lastname: 'Doe'
         }
 
