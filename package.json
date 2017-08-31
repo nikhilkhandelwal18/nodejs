@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/nikhilkhandelwal18/nodejs#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.7",
     "express": "^4.15.4",
-    "moment": "^2.18.1"
+    "moment": "^2.18.1",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "jasmine-node": "^1.14.5"

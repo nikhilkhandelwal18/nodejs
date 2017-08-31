@@ -3,10 +3,13 @@ var app = express(); //returning a function with some properties look into expre
 
 var port = process.env.PORT || 3000; // this or default
 
-console.log(__dirname + '/public');
 
 //middleware
 app.use('/assets', express.static(__dirname + '/public'));
+
+//template engine set
+app.set('view engine', 'ejs');
+
 
 //custom middleware
 //execute between express req and response
@@ -18,15 +21,12 @@ app.use('/', function(req, res, next) {
 
 //express routing
 app.get('/', function(req, res) { //express req, res have additional functionality than node req/res.
-    res.send(`<html>
-    <head>
-        <link href = assets/style.css type = text/css rel = stylesheet> </link>
-    </head>
-    <body>
-        <h1>Hello World! </h1>
-    </body>
-    </html>`);
+    res.render('index')
+});
 
+
+app.get('/person/:id', function(req, res) { //express req, res have additional functionality than node req/res.
+    res.render('person', { ID: req.params.id});
 });
 
 app.listen(port);
