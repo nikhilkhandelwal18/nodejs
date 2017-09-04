@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title> Index RESTful API </title>
+
+    <link href=a ssets/style.css type=t ext/css rel=s tylesheet> </link>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Hello World using Template engine! </h1>
+    <form method="POST" action="person">
+        First Name: <input type="text" id="firstname" name="firstname" /> 
+        Last Name: <input type="text" id="lastname" name="lastname" />
+        <br/>
+        <button type="submit" value="submit"> Submit </button>
+    </form>
+
+    <script>
+        $.ajax({
+            type: 'POST',
+            url: '/personjson',
+            data: JSON.stringify({ firstname: 'John', lastname: 'Doe' }),
+            dataType: 'json',
+            contentType: 'application/json'
+        });
+    </script>
+</body>
+
+</html>
