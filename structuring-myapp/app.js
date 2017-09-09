@@ -12,7 +12,7 @@ var htmlController = require('./controllers/htmlController');
 var port = process.env.port || 3000;
 
 //middleware
-app.use('/assets', express.static(__dirname + '/public'));
+app.use('/assets', express.static(path.join(__dirname, '../', 'public')));
 
 //template engine set
 app.set('view engine', 'ejs');
