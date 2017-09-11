@@ -1,0 +1,32 @@
+<html ng-app = "TestApp">
+
+<head >
+    <title>
+        MEAN Stack
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>      
+</head>
+
+<body ng-controller = "MainController as vm">
+    {{ vm.message }}
+From Client <br/>
+    <ul ng-repeat="person in vm.clientPeople">
+        <li>
+            {{ person.name }}
+        </li>
+    </ul>
+
+ From Server <br />
+    <ul ng-repeat="person in vm.peopleFromServer">
+            <li>
+                {{ person.name }}
+            </li>
+    </ul>
+
+    <script>
+        var peopleFromServerGlobal = <%- JSON.stringify(serverPeople) %>;    
+    </script>
+    <script src="/assets/js/angular-app.js"></script>
+</body>
+
+</html>
