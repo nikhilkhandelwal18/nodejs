@@ -7,3 +7,5 @@ mongodb cloud:
 https://mlab.com/home?newLogin=1
 username: nikhil.khandelwal
 pwd: !QAZ2wsx
+email: nikhil.nitor@gmail.com
+pwd: Nitor@2017
